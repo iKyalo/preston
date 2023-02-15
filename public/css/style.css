@@ -1,0 +1,376 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-visible {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 1rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .menu-visible {
+        display: block;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 1rem;
+        text-align: right;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    border-bottom: 1px solid black;
+}
+
+.card {
+    max-width: 300px;
+    min-height: 180px;
+    max-height: 300px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.card p {
+    font-size: 18px;
+    margin: 0 20px;
+    color: gray;
+}
+
+.card span {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card i {
+    font-size: 36px;
+    margin: 20px;
+    color: white;
+}
+
+.card-pending {
+    border: 1px solid lightblue;
+}
+
+.card-loading {
+    border: 1px solid yellow;
+}
+
+.card-dispatched {
+    border: 1px solid green;
+}
+
+.card-delivered {
+    border: 1px solid red;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+
+.vehicle-status-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+}
+
+.vehicle-status-card-1,
+.vehicle-status-card-2,
+.vehicle-status-card-3 {
+    width: calc(33.33% - 20px);
+    background-color: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.vehicle-status-card-1:hover,
+.vehicle-status-card-2:hover,
+.vehicle-status-card-3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.vehicle-status-card-icon-1,
+.vehicle-status-card-icon-2,
+.vehicle-status-card-icon-3 {
+    font-size: 60px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.vehicle-status-card-title-1,
+.vehicle-status-card-title-2,
+.vehicle-status-card-title-3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.vehicle-status-card-subtitle-1,
+.vehicle-status-card-subtitle-2,
+.vehicle-status-card-subtitle-3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.register-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-container .form-group {
+    margin-bottom: 20px;
+}
+
+.register-container .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.register-container .form-control {
+    width: 100%;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+}
+
+.register-container .password-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container .password-group label:first-child {
+    margin-bottom: 10px;
+}
+
+.register-container .password-group input:first-child {
+    margin-bottom: 20px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* CSS for the vehicle table */
+
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vehicle-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.vehicle-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.vehicle-table-row:nth-child(even) {
+    background-color: #ddd;
+}
+
+.edit-vehicle-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-vehicle-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #da190b;
+}
+
+/* Style the form container */
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 4%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style the form fields */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5"><polygon points="0,0 10,0 5,5"/></svg>')
+        no-repeat right #fff;
+    background-size: 12px;
+}
+
+/* Style the radio buttons */
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style the submit button */
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #2e8b57;
+}
+
+.btn {
+    background-color: dodgerblue;
+    /* margin-left: 20%; */
+    margin-bottom: 1%;
+}
+
+#delivery_instructions {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.swal2-select {
+    min-width: 50%;
+    max-width: 80%;
+}
